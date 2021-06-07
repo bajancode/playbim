@@ -10,8 +10,34 @@ body {
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
+
+/* I don't think I'm selecting these properly...try again tomorrow! */
+
+h1 {
+    font-size: 8rem;
+}
+
+#tagline {
+    font-size: 3rem;
+}
+
+/* Medium to larger screens:
+go back to bs default size for the h1, guesstimating here at 5rem
+*/
+
+@media (min-width:768px) {
+    h1 {
+        font-size: 5rem;
+    };
+    #tagline {
+        font-size: 2.5rem
+    }
+
+}
+
+/* Because got rid of "Cover-container" removed container. but adding it back and trying 80vh instead of 60vh to see if that resolves the issue of the text on big screens breaking up */
 .cover-container {
-  max-width: 60vw;
+  max-width: 85vw;
 }
 
 .nav-link {

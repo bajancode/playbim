@@ -38,7 +38,7 @@
                     'step',
                     ['get', 'point_count'],
                     '#03A9F4',
-                    10,
+                    30,
                     '#2196F3',
                     30,
                     '#3F51B5'
@@ -46,9 +46,9 @@
                 'circle-radius': [
                     'step',
                     ['get', 'point_count'],
-                    15, //pixel width
+                    25, //pixel width
                     10, //step count
-                    20,
+                    25,
                     30,
                     25
                 ]
