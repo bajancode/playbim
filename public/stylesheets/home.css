@@ -21,9 +21,13 @@ h1 {
     font-size: 3rem;
 }
 
-/* Medium to larger screens:
-go back to bs default size for the h1, guesstimating here at 5rem
-*/
+#view-playgrounds-button {
+    font-size: 2.2rem;
+    padding: 1.2rem;
+    margin-top: 3em;
+}
+
+/* Medium to larger screens*/
 
 @media (min-width:768px) {
     h1 {
