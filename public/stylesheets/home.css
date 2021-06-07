@@ -27,6 +27,11 @@ h1 {
     margin-top: 3em;
 }
 
+#view-playgrounds-button:hover,
+#view-playgrounds-button:active {
+    color: transparent;
+}
+
 /* Medium to larger screens*/
 
 @media (min-width:768px) {
