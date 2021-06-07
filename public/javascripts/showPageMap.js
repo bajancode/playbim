@@ -1,7 +1,7 @@
 mapboxgl.accessToken = mapToken;
  const map = new mapboxgl.Map({
  container: 'map', // container ID
- style: 'mapbox://styles/mapbox/streets-v9', // style URL, streets https://docs.mapbox.com/mapbox-gl-js/example/setstyle/
+ style: 'mapbox://styles/mapbox/streets-v11', // style URL, streets https://docs.mapbox.com/mapbox-gl-js/example/setstyle/
  center: campground.geometry.coordinates, // starting position [lng, lat]
  zoom: 13 // starting zoom
 });
