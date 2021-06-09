@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width">
+    <title>About PlayBim>    
+    <link rel="shortcut icon" type="image/png" href="../assets/palmtreefavicon.png" alt="small palm tree cartoon image">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+    crossorigin="anonymous"> 
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body class="d-flex text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <!-- <h3 class="float-md-left mb-0">PlayBim</h3> -->
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="/campgrounds">Playgrounds</a>
+                    <% if(!currentUser) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else { %>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+                </nav>
+            </div>
+        </header>
+        <main class="px-3">
+            <h1>PlayBim started with a very Bajan ting...</h1>
+            <p id="tagline" class="lead"> 
+                <strong>sometimes I was just too lazy to deal with the sun and sand of the beach with my kid!</strong> <br> </p>
+            <p>Barbados (“Bim” to many locals) has more playgrounds than I realized, some a bit sketchy but some are true gems.</p> 
+
+            <p>This is a tiny side project completed as part of a course, so I’m not always able to update it as much as I’d like, but hope it’s useful to you! Please add playgrounds you’ve come across in Barbados. (It does work outside of Barbados and you could use it for other kid related things that aren’t playgrounds I suppose, but the emphasis right now is Bajan playgrounds so I can’t offer support for other stuff now).</p>
+                
+            <p>Please remember to follow physical distancing guidelines, and of course I don’t assume any liability for anything that happens at the playground or on this website. Be safe! 
+                </p>
+                <a id="view-playgrounds-button" href="/campgrounds" 
+               class="mt-3 btn btn-lg btn-outline-light font-weight-bold border-white">
+               View Playgrounds</a>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>&copy; 2021 </p>
+        </footer>
+
+
+    </div>
+
+<body>
+<!-- 
+    Note Colt had 2 bootstrap js links pasted so if not working may need to grab the other -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+  crossorigin="anonymous"></script> 
+  
+</body>
+</html>
