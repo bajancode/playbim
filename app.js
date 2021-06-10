@@ -18,12 +18,16 @@ const helmet = require("helmet")
 const mongoSanitize = require("express-mongo-sanitize");
 
 const userRoutes = require("./routes/users");
-const campgroundRoutes = require("./routes/campgrounds");
+const playgroundRoutes = require("./routes/playgrounds");
 const reviewRoutes = require("./routes/reviews");
 
 const MongoStore = require("connect-mongo");
 
+//Below Playground was added just to try out if connecting to mongo database etc. 10 june
+// const Playground = require("./models/playground");
+
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
+//I tried to change this to yelp camp, made a new entry, and it still didn't show up.
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -145,8 +149,8 @@ app.use((req, res, next) => {
 })
 
 app.use("/", userRoutes);
-app.use("/campgrounds", campgroundRoutes)
-app.use("/campgrounds/:id/reviews", reviewRoutes)
+app.use("/playgrounds", playgroundRoutes)
+app.use("/playgrounds/:id/reviews", reviewRoutes)
 
 // app.use("/about", (req, res) => {
 //     res.render("about")
@@ -155,6 +159,27 @@ app.use("/campgrounds/:id/reviews", reviewRoutes)
 app.get("/", (req, res) => {
     res.render("home")
 })
+
+//the below makeplayground using as an example to try to get db to work 10 june
+// app.get("/makeplayground", async (req, res) => {
+//     const play = new Playground({ 
+//         title: "boba beach", 
+//         geometry: { type: 'Point', coordinates: [ -40.5824, -19.5248 ] },
+//         location: 'Wildey, Barbados',
+//         price: 2,
+//         description: 'boba test',
+//         images: [
+//           {
+//             url: 'https://res.cloudinary.com/bugsy/image/upload/v1623348796/PlayBim/epvqbf6fliyad6axdv2l.jpg',
+//             filename: 'PlayBim/epvqbf6fliyad6axdv2l'
+//           }
+//         ],
+             
+    
+//     });
+//     await play.save();
+//     res.send(play)
+// })
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page NOT fOUND", 404))

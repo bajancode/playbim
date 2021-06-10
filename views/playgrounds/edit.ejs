@@ -2,17 +2,17 @@
   <div class="row">
       <h1 class="text-center">Edit Playground</h1>
       <div class="col-md-6 offset-md-3">
-        <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form" 
+        <form action="/playgrounds/<%=playground._id%>?_method=PUT" method="POST" novalidate class="validated-form" 
             enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label" for="title">Title</label>
-                <input class="form-control" type="text" id="title" name="campground[title]" 
-                    value="<%=campground.title %>" required>
+                <input class="form-control" type="text" id="title" name="playground[title]" 
+                    value="<%=playground.title %>" required>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
-                <input class="form-control" type="text" id="location" name="campground[location]"
-                    value="<%=campground.location %>" required>
+                <input class="form-control" type="text" id="location" name="playground[location]"
+                    value="<%=playground.location %>" required>
                     <div class="valid-feedback">
                         Looks good!
                    </div>
@@ -23,8 +23,8 @@
                 <div class="input-group">
                     <span class="input-group-text" id="price-label">$</span>
                     <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
-                        aria-describedby="price-label" name="campground[price]"
-                        value="<%=campground.price %>" required>
+                        aria-describedby="price-label" name="playground[price]"
+                        value="<%=playground.price %>" required>
                         <div class="valid-feedback">
                             Looks good!
                        </div>
@@ -37,7 +37,7 @@
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
                 <textarea class="form-control" type="text" id="description" 
-                name="campground[description]" required><%=campground.description %></textarea>
+                name="playground[description]" required><%=playground.description %></textarea>
                 <div class="valid-feedback">
                     Looks good!
                </div>
@@ -51,8 +51,8 @@
                   <div id="formFile"></div>
               </div>
               <div class="mb-3">
-                <% campground.images.forEach(function(img, i) { %>
-                <img src="<%=img.url %>" class="img-thumbnail w-50" alt="campground images">
+                <% playground.images.forEach(function(img, i) { %>
+                <img src="<%=img.url %>" class="img-thumbnail w-50" alt="playground images">
                 <div class="form-check-inline">
                     <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
                 </div>
@@ -63,7 +63,7 @@
             <button class="btn btn-info">Update Playground</button>
             </div>
         </form>
-        <a href="/campgrounds/<%= campground._id%>">Back to Playground</a>
+        <a href="/playgrounds/<%= playground._id%>">Back to Playground</a>
     
       </div>
   </div>

@@ -2,21 +2,21 @@
 <link rel="stylesheet" href="/stylesheets/stars.css">
 <div class="row">
     <div class="col-6">
-        <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
+        <div id="playgroundCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <% campground.images.forEach((img, i) => {  %>
+                <% playground.images.forEach((img, i) => {  %>
                 <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
                     <img src="<%= img.url%>" class="d-block w-100" alt="">
                 </div>
                 <% }) %>
 
             </div>
-            <% if(campground.images.length > 1) {%>
-            <a class="carousel-control-prev" href="#campgroundCarousel" role="button" data-bs-slide="prev">
+            <% if(playground.images.length > 1) {%>
+            <a class="carousel-control-prev" href="#playgroundCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only"></span>
             </a>
-            <a class="carousel-control-next" href="#campgroundCarousel" role="button" data-bs-slide="next">
+            <a class="carousel-control-next" href="#playgroundCarousel" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only"></span>
             </a>
@@ -25,18 +25,18 @@
 
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title"><%= campground.title%></h5>
-                <p class="card-text"><%= campground.description%></p>
+                <h5 class="card-title"><%= playground.title%></h5>
+                <p class="card-text"><%= playground.description%></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-muted"><%= campground.location%></li>
-                <li class="list-group-item">Submitted by <%= campground.author.username%></li>
-                <li class="list-group-item">$<%= campground.price%></li>
+                <li class="list-group-item text-muted"><%= playground.location%></li>
+                <li class="list-group-item">Submitted by <%= playground.author.username%></li>
+                <li class="list-group-item">$<%= playground.price%></li>
             </ul>
-            <%  if( currentUser && campground.author.equals(currentUser._id))  {%>
+            <%  if( currentUser && playground.author.equals(currentUser._id))  {%>
             <div class="card-body">
-                <a class="card-link btn btn-info" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
-                <form class="d-inline" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                <a class="card-link btn btn-info" href="/playgrounds/<%=playground._id%>/edit">Edit</a>
+                <form class="d-inline" action="/playgrounds/<%=playground._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-danger">Delete</button>
                 </form>
             </div>
@@ -52,7 +52,7 @@
 
         <% if(currentUser){ %>
         <h3>What did you think about this playground?</h3>
-        <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
+        <form action="/playgrounds/<%=playground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
             <!-- <div class="mb-3">
                 <label class="form-label" for="rating">Rating</label>
                 <input class="form-range" type="range" min="1" max="5" name="review[rating]" id="rating">
@@ -81,7 +81,7 @@
             <button class="btn btn-success">Submit</button>
         </form>
         <% } %>
-        <% for(let review of campground.reviews) { %>
+        <% for(let review of playground.reviews) { %>
         <div class="card mb-3">
             <!-- Maybe because it's a card the top margin is annoying -->
             <div class="card-body">
@@ -92,7 +92,7 @@
                 <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username%></h6> -->
                 <p class="card-text">Review: <%= review.body %></p>
                 <%  if( currentUser && review.author.equals(currentUser._id))  {%>
-                <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                <form action="/playgrounds/<%=playground._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-sm btn-danger">Delete</button>
                 </form>
                 <% } %>
@@ -104,7 +104,7 @@
 
 <script>
     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-    const campground = <%- JSON.stringify(campground) %>
+    const playground = <%- JSON.stringify(playground) %>
 </script>
 
 <script src="/javascripts/showPageMap.js"></script>
