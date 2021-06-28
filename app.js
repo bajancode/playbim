@@ -26,7 +26,9 @@ const MongoStore = require("connect-mongo");
 //Below Playground was added just to try out if connecting to mongo database etc. 10 june
 // const Playground = require("./models/playground");
 
-const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/practicecamp";
+
+
 //I tried to change this to yelp camp, made a new entry, and it still didn't show up.
 
 mongoose.connect(dbUrl, {
