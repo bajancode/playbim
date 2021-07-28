@@ -1,14 +1,16 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">PlayBim</a>
+      <!-- <a class="navbar-brand" href="#">PlayBim</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link" href="/">PlayBim</a>
+          <!-- //removed "nav-link active" from above -->
+          <a class="nav-link" href="/about">About</a>
           <a class="nav-link" href="/playgrounds">Playgrounds</a>
-          <a class="nav-link" href="/playgrounds/new">New Playground</a>
+          <a class="nav-link" href="/playgrounds/new">Add Playground</a>
         </div>
         <div class="navbar-nav ml-auto">
           <% if(!currentUser) {%>

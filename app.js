@@ -12,14 +12,15 @@ const ExpressError = require("./utils/ExpressError");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const User = require("./models/user")
-const helmet = require("helmet")
+const User = require("./models/user");
+const helmet = require("helmet");
 
 const mongoSanitize = require("express-mongo-sanitize");
 
 const userRoutes = require("./routes/users");
 const playgroundRoutes = require("./routes/playgrounds");
 const reviewRoutes = require("./routes/reviews");
+const aboutRoute = require("./routes/about");
 
 const MongoStore = require("connect-mongo");
 
@@ -151,12 +152,12 @@ app.use((req, res, next) => {
 })
 
 app.use("/", userRoutes);
-app.use("/playgrounds", playgroundRoutes)
-app.use("/playgrounds/:id/reviews", reviewRoutes)
+app.use("/playgrounds", playgroundRoutes);
+app.use("/playgrounds/:id/reviews", reviewRoutes);
 
-// app.use("/about", (req, res) => {
-//     res.render("about")
-// })
+app.use("/about", (req, res) => {
+    res.render("about")
+})
 
 app.get("/", (req, res) => {
     res.render("home")
@@ -184,12 +185,12 @@ app.get("/", (req, res) => {
 // })
 
 app.all("*", (req, res, next) => {
-    next(new ExpressError("Page NOT fOUND", 404))
+    next(new ExpressError("Cu Dear, page not found. Sorry!", 404))
 })
 
 app.use((err, req, res, next) => {
     const {statusCode = 500} = err;
-    if(!err.message) err.message = "Oh noes, Something Went Wrong!"
+    if(!err.message) err.message = "Cu Dear, Something Went Wrong! I aino what tuh tell yuh!!"
     res.status(statusCode).render("error", {err})
 })
 
