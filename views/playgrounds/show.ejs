@@ -35,7 +35,7 @@
             </ul>
             <%  if( currentUser && playground.author.equals(currentUser._id))  {%>
             <div class="card-body">
-                <a class="card-link btn btn-info" href="/playgrounds/<%=playground._id%>/edit">Edit</a>
+                <a class="card-link btn btn-primary" href="/playgrounds/<%=playground._id%>/edit">Edit</a>
                 <form class="d-inline" action="/playgrounds/<%=playground._id%>?_method=DELETE" method="POST">
                     <button class="btn btn-danger">Delete</button>
                 </form>
