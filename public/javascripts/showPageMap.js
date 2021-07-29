@@ -1,7 +1,8 @@
 mapboxgl.accessToken = mapToken;
  const map = new mapboxgl.Map({
  container: 'map', // container ID
- style: 'mapbox://styles/mapbox/streets-v11', // style URL, streets https://docs.mapbox.com/mapbox-gl-js/example/setstyle/
+ style: 'mapbox://styles/bajancode/ckrp5zaib258317w9zjutbcva',
+//  style: 'mapbox://styles/mapbox/streets-v11', // style URL, streets https://docs.mapbox.com/mapbox-gl-js/example/setstyle/
  center: playground.geometry.coordinates, // starting position [lng, lat]
  zoom: 13 // starting zoom
 });

@@ -69,9 +69,9 @@
             filter: ['!', ['has', 'point_count']],
             paint: {
                 'circle-color': '#11b4da',
-                'circle-radius': 4,
+                'circle-radius': 5,
                 'circle-stroke-width': 1,
-                'circle-stroke-color': '#fff'
+                'circle-stroke-color': '#0580b9'
             }
         });
 
@@ -121,6 +121,7 @@
         map.on('mouseleave', 'clusters', function () {
             map.getCanvas().style.cursor = '';
         });
+
     });
 
 
