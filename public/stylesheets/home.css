@@ -42,9 +42,9 @@ h1 {
 }
 
 /* Because got rid of "Cover-container" removed container. but adding it back and trying 80vh instead of 60vh to see if that resolves the issue of the text on big screens breaking up */
-.cover-container {
+/* .cover-container {
   max-width: 85vw;
-}
+} */
 
 .nav-link {
     padding: 0.25rem 0;
