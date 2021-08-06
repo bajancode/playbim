@@ -1,7 +1,8 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/stylesheets/stars.css">
+
 <div class="row">
-    <div class="col-6">
+    <div class="col-md-6">
         <div id="playgroundCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <% playground.images.forEach((img, i) => {  %>
@@ -47,7 +48,8 @@
         </div>
 
     </div>
-    <div class="col-6">
+
+    <div class="col-md-6">
         <div id='map' class="mb-3" ></div>
 
         <% if(currentUser){ %>
