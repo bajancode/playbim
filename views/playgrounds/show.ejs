@@ -51,9 +51,9 @@
 
     <div class="col-md-6">
         <div id='map' class="mb-3" ></div>
+        <h3>What did you think about this playground?</h3>
 
         <% if(currentUser){ %>
-        <h3>What did you think about this playground?</h3>
         <form action="/playgrounds/<%=playground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
             <!-- <div class="mb-3">
                 <label class="form-label" for="rating">Rating</label>
@@ -82,7 +82,10 @@
             </div>
             <button class="btn btn-success">Submit</button>
         </form>
-        <% } %>
+        <% } else {%>
+            <p>Login or register to leave a review</p>
+            <% } %>
+
         <% for(let review of playground.reviews) { %>
         <div class="card mb-3">
             <!-- Maybe because it's a card the top margin is annoying -->
