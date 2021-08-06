@@ -51,7 +51,7 @@
 
     <div class="col-md-6">
         <div id='map' class="mb-3" ></div>
-        <h3>What did you think about this playground?</h3>
+        <h3>What do you think about this playground?</h3>
 
         <% if(currentUser){ %>
         <form action="/playgrounds/<%=playground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
@@ -83,10 +83,11 @@
             <button class="btn btn-success">Submit</button>
         </form>
         <% } else {%>
-            <p>Login or register to leave a review</p>
+            <p><a href="https://evening-spire-81995.herokuapp.com/login">Login</a> or <a href="https://evening-spire-81995.herokuapp.com/register">register</a> to leave a review</p>
             <% } %>
-
-        <% for(let review of playground.reviews) { %>
+            <!-- Note, the above links to login/register are hardcoded, will need to improve or change if change domain. Tried linked to ejs file and broke things -->
+        
+            <% for(let review of playground.reviews) { %>
         <div class="card mb-3">
             <!-- Maybe because it's a card the top margin is annoying -->
             <div class="card-body">
