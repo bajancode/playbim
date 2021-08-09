@@ -6,7 +6,7 @@
 <% for (let playground of playgrounds){%>
 <div class="card mb-3">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="display-image">
             <%if(playground.images.length) {%>
             <img class="img-fluid" alt="" src="<%=playground.images[0].url%>">
             <% }else {%>
