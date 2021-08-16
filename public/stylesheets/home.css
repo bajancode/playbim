@@ -8,10 +8,6 @@ body {
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
-#about {
-   height: 130vh!important;
-}
-
 h1 {
     font-size: 8rem;
 }
@@ -31,6 +27,10 @@ h1 {
     color: transparent;
 }
 
+#about {
+    height: 130vh!important;
+ }
+
 /* Medium to larger screens*/
 
 @media (min-width:768px) {
@@ -39,6 +39,9 @@ h1 {
     };
     #tagline {
         font-size: 2.5rem
+    };
+    #about {
+        height: 100vh!important;
     }
 
 }
