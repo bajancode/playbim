@@ -1,11 +1,28 @@
 	mapboxgl.accessToken = mapToken;
+
+    // function viewportSize(x) {
+    //     if (x.matches) {
+    //         document.createElement("")
+    //     }
+    // }
+
+    //original
         const map = new mapboxgl.Map({
         container: 'cluster-map',
         style: 'mapbox://styles/bajancode/ckrp5zaib258317w9zjutbcva',
         // prev version: mapbox://styles/mapbox/streets-v11
         center: [-59.5432, 13.1939],
         zoom: 10
-    });
+        });
+
+    // //mobile
+    //     const mapMobile = new mapboxgl.Map({
+    //         container: 'cluster-map',
+    //         style: 'mapbox://styles/bajancode/ckrp5zaib258317w9zjutbcva',
+    //         // prev version: mapbox://styles/mapbox/streets-v11
+    //         center: [-59.5432, 13.1939],
+    //         zoom: 9
+    //         });
 
     map.addControl(new mapboxgl.NavigationControl());
 
