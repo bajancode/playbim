@@ -8,6 +8,25 @@ body {
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
+img.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    img.bg {
+        left:50%;
+        margin-left: -512px;
+    }
+}
+
 h1 {
     font-size: 8rem;
 }
@@ -27,10 +46,6 @@ h1 {
     color: transparent;
 }
 
-#about {
-    height: 130vh!important;
- }
-
 /* Medium to larger screens*/
 
 @media (min-width:768px) {
@@ -40,10 +55,6 @@ h1 {
     #tagline {
         font-size: 2.5rem
     };
-    #about {
-        height: 100vh!important;
-    }
-
 }
 
 /* Because got rid of "Cover-container" removed container. but adding it back and trying 80vh instead of 60vh to see if that resolves the issue of the text on big screens breaking up */
@@ -85,3 +96,21 @@ h1 {
     color: #333;
     text-shadow: none;
 }
+
+/* 
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top:0;
+    left:0
+}
+
+@media screen and (max-width: 1024px) {
+    img.bg {
+        left:50%;
+        margin-left: -512px
+    }
+} */
