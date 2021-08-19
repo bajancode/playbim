@@ -39,7 +39,15 @@ img.bg {
     margin-right: auto
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    #cluster-map {
+        height: 440px;
+        width: 75%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
     #cluster-map {
         height: 440px;
         width: 75%;
