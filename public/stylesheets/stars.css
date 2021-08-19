@@ -282,4 +282,7 @@
             animation-fill-mode: forwards;
   }
 
+  .starability-heart {
+    margin-bottom: -2.5rem !important
+  }
   
