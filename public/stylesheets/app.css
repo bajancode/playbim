@@ -34,15 +34,15 @@ img.bg {
 }
 
 #cluster-map {
-    width: 75%;
     height: 500px;
     margin-left: auto;
     margin-right: auto
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     #cluster-map {
         height: 440px;
+        width: 75%;
     }
 }
 
