@@ -39,6 +39,11 @@ img.bg {
         height: 440px;
         width: 75%;
     }
+
+    #about-text {
+        width: 50%;
+        margin: auto
+    }
 }
 
 #map {
