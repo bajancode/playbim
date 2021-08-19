@@ -34,8 +34,10 @@ img.bg {
 }
 
 #cluster-map {
-    width: 100%;
-    height: 500px
+    width: 75%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto
 }
 
 @media screen and (max-width: 1024px) {
@@ -44,7 +46,6 @@ img.bg {
     }
 }
 
-
 #map {
     width: 100%;
     height: 300px
@@ -52,9 +53,10 @@ img.bg {
 
 
 .btn-primary {
-    background-color: #006adb !important;
-}
+    background-color: #006adb!important;
+    border-color: #006dab!important
 
+}
 
 #display-image img {
     width: 100%;
