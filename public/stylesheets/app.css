@@ -58,6 +58,29 @@ img.bg {
 
 }
 
+.btn-primary:hover,
+.btn-primary:active {
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+
+}
+/* .nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+} */
+
+/* .btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+} */
+
+
 #display-image img {
     width: 100%;
     max-height: 300px;
